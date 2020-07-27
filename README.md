@@ -2,7 +2,7 @@
 
 [Docker] image: Chromium and ChromeDriver for headless tests on Alpine Linux
 
-[![nodesource/node](http://dockeri.co/image/prantlf/chromedriver-headless)](https://hub.docker.com/repository/docker/prantlf/chromedriver-headless/)
+[![prantlf/chromedriver-headless](http://dockeri.co/image/prantlf/chromedriver-headless)](https://hub.docker.com/repository/docker/prantlf/chromedriver-headless/)
 
 [This image] is supposed to help testing browser applications in [headless Chromium] driven by `chromedriver`. This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Chromium] and `chromedriver` have to be updated from time to time by triggering a new build manually.
 
