@@ -1,0 +1,4 @@
+
+#!/bin/sh
+/usr/bin/chromium-browser --headless --no-sandbox \
+  --disable-dev-shm-usage --remote-debugging-port=9876 $*

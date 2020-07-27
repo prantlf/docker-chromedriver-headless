@@ -1,0 +1,17 @@
+FROM prantlf/alpine-glibc:latest
+LABEL maintainer="Ferdinand Prantl <prantlf@gmail.com>"
+
+RUN apk --no-cache add chromium unzip && \
+    cd /root && \
+    BASE_URL=https://chromedriver.storage.googleapis.com && \
+    VERSION=$(wget -O- "$BASE_URL/LATEST_RELEASE") && \
+    wget "$BASE_URL/$VERSION/chromedriver_linux64.zip" && \
+    unzip chromedriver_linux64.zip chromedriver -d /usr/local/bin && \
+    chmod 755 /usr/local/bin/chromedriver && \
+    rm chromedriver_linux64.zip && \
+    apk del unzip
+COPY . /
+
+ENTRYPOINT ["chromedriver"]
+CMD ["--port=4444", "--whitelisted-ips=''"]
+EXPOSE 4444
