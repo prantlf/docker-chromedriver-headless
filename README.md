@@ -1,7 +1,5 @@
 # prantlf/chromedriver-headless
 
- --headless --no-sandbox --disable-dev-shm-usage --remote-debugging-port=9876
-
 [Docker] image: Chromium and ChromeDriver for headless tests on Alpine Linux
 
 [![nodesource/node](http://dockeri.co/image/prantlf/chromedriver-headless)](https://hub.docker.com/repository/docker/prantlf/chromedriver-headless/)
