@@ -33,3 +33,7 @@ login ::
 
 push ::
 	docker push prantlf/chromedriver-headless:latest
+
+version :: build
+	#docker tag chromedriver-headless prantlf/chromedriver-headless:$(VERSION)
+	docker push prantlf/chromedriver-headless:$(VERSION)

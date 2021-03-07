@@ -8,7 +8,7 @@
 
 ## Tags
 
-- [`latest`]
+- [`latest`], `86`
 
 ## Install
 
@@ -84,33 +84,22 @@ a volume when running the containerL
 
 The local image is built as `chromedriver-headless` and pushed to the docker hub with the tag `prantlf/chromedriver-headless:latest`.
 
-Remove an old local image:
-
+    # Remove an old local image:
     make clean
-
-Build and tag new local images:
-
+    # Build and tag new local images:
     make build
-
-Enter an interactive shell inside the latest created image:
-
+    # Enter an interactive shell inside the latest created image:
     make shell
-
-Tag the local image for pushing:
-
+    # Tag the local image for pushing:
     make tag
-
-Login to the docker hub:
-
+    # Login to the docker hub:
     make login
-
-Push the local image to the docker hub:
-
+    # Push the local image to the docker hub:
     make push
 
 ## License
 
-Copyright (c) 2020 Ferdinand Prantl
+Copyright (c) 2019-2021 Ferdinand Prantl
 
 Licensed under the MIT license.
 
