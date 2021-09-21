@@ -10,7 +10,7 @@ If you have trouble pulling the image from the Docker's default hub.docker.com, 
 
 ## Tags
 
-- [`latest`], `86`
+- [`latest`], `93`, `86`
 
 ## Install
 
