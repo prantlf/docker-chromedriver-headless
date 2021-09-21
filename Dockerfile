@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.14
 LABEL maintainer="Ferdinand Prantl <prantlf@gmail.com>"
 
 RUN apk --no-cache add chromium chromium-chromedriver
