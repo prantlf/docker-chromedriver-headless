@@ -6,6 +6,8 @@
 
 [This image] is supposed to help testing browser applications in [headless Chromium] driven by `chromedriver`. This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Chromium] and `chromedriver` have to be updated from time to time by triggering a new build manually.
 
+If you have trouble pulling the image from the Docker's default hub.docker.com, try gitlab.com, where [this project] is primarily maintained: `registry.gitlab.com/prantlf/docker-chromedriver-headless`.
+
 ## Tags
 
 - [`latest`], `86`
@@ -105,6 +107,7 @@ Licensed under the MIT license.
 
 [Docker]: https://www.docker.com/
 [This image]: https://hub.docker.com/repository/docker/prantlf/chromedriver-headless
+[this project]: https://gitlab.com/prantlf/docker-chromedriver-headless#prantlfchromedriver-headless
 [`latest`]: https://hub.docker.com/repository/docker/prantlf/chromedriver-headless/tags
 [headless Chromium]: https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
 [Chromium]: https://www.chromium.org/
