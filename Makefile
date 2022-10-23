@@ -1,5 +1,5 @@
 clean ::
-	docker image rm chromedriver-headless
+	docker image rm chromedriver-headless prantlf/chromedriver-headless registry.gitlab.com/prantlf/docker-chromedriver-headless
 
 lint ::
 	docker run --rm -i \
@@ -8,6 +8,8 @@ lint ::
 
 build ::
 	docker build -t chromedriver-headless .
+	docker tag chromedriver-headless prantlf/chromedriver-headless
+	docker tag chromedriver-headless registry.gitlab.com/prantlf/docker-chromedriver-headless
 
 shell ::
 	docker run --rm -it --entrypoint=busybox chromedriver-headless sh
@@ -24,15 +26,18 @@ stop ::
 show ::
 	docker logs chromedriver
 
-tag ::
-	docker tag chromedriver-headless prantlf/chromedriver-headless:latest
-
 login ::
 	docker login --username=prantlf
+	docker login registry.gitlab.com --username=prantlf
+
+pull ::
+	docker pull prantlf/chromedriver-headless
+	docker pull registry.gitlab.com/prantlf/docker-chromedriver-headless
 
 push ::
-	docker push prantlf/chromedriver-headless:latest
-
-version :: build
-	#docker tag chromedriver-headless prantlf/chromedriver-headless:$(VERSION)
-	docker push prantlf/chromedriver-headless:$(VERSION)
+	docker push prantlf/chromedriver-headless
+	docker push registry.gitlab.com/prantlf/docker-chromedriver-headless
+	docker tag prantlf/chromedriver-headless prantlf/chromedriver-headless:102
+	docker push prantlf/chromedriver-headless:102
+	docker tag registry.gitlab.com/prantlf/docker-chromedriver-headless registry.gitlab.com/prantlf/docker-chromedriver-headless:102
+	docker push registry.gitlab.com/prantlf/docker-chromedriver-headless:102
